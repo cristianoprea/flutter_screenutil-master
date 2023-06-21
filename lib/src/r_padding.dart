@@ -19,7 +19,7 @@ class RPadding extends SingleChildRenderObjectWidget {
   @override
   RenderPadding createRenderObject(BuildContext context) {
     return RenderPadding(
-      padding: padding is REdgeInsets ? padding : padding.r,
+      padding: padding is REdgeInsets ? padding : padding.rr,
       textDirection: Directionality.maybeOf(context),
     );
   }
@@ -28,7 +28,7 @@ class RPadding extends SingleChildRenderObjectWidget {
 class REdgeInsets extends EdgeInsets {
   /// Creates adapt insets from offsets from the left, top, right, and bottom.
   REdgeInsets.fromLTRB(double left, double top, double right, double bottom)
-      : super.fromLTRB(left.r, top.r, right.r, bottom.r);
+      : super.fromLTRB(left.rr, top.rr, right.rr, bottom.rr);
 
   /// Creates adapt insets where all the offsets are `value`.
   ///
@@ -40,7 +40,7 @@ class REdgeInsets extends EdgeInsets {
   /// const REdgeInsets.all(8.0)
   /// ```
   /// {@end-tool}
-  REdgeInsets.all(double value) : super.all(value.r);
+  REdgeInsets.all(double value) : super.all(value.rr);
 
   /// Creates adapt insets with symmetrical vertical and horizontal offsets.
   ///
@@ -55,7 +55,7 @@ class REdgeInsets extends EdgeInsets {
   REdgeInsets.symmetric({
     double vertical = 0,
     double horizontal = 0,
-  }) : super.symmetric(vertical: vertical.r, horizontal: horizontal.r);
+  }) : super.symmetric(vertical: vertical.rr, horizontal: horizontal.rr);
 
   /// Creates adapt insets with only the given values non-zero.
   ///
@@ -73,10 +73,10 @@ class REdgeInsets extends EdgeInsets {
     double left = 0,
     double top = 0,
   }) : super.only(
-          bottom: bottom.r,
-          right: right.r,
-          left: left.r,
-          top: top.r,
+          bottom: bottom.rr,
+          right: right.rr,
+          left: left.rr,
+          top: top.rr,
         );
 }
 
@@ -91,7 +91,7 @@ class REdgeInsetsDirectional extends EdgeInsetsDirectional {
   /// const REdgeInsetsDirectional.all(8.0)
   /// ```
   /// {@end-tool}
-  REdgeInsetsDirectional.all(double value) : super.all(value.r);
+  REdgeInsetsDirectional.all(double value) : super.all(value.rr);
 
   /// Creates insets with only the given values non-zero.
   ///
@@ -109,10 +109,10 @@ class REdgeInsetsDirectional extends EdgeInsetsDirectional {
     double start = 0,
     double top = 0,
   }) : super.only(
-          bottom: bottom.r,
-          start: start.r,
-          end: end.r,
-          top: top.r,
+          bottom: bottom.rr,
+          start: start.rr,
+          end: end.rr,
+          top: top.rr,
         );
 
   /// Creates adapt insets from offsets from the start, top, end, and bottom.
@@ -122,9 +122,9 @@ class REdgeInsetsDirectional extends EdgeInsetsDirectional {
     double end,
     double bottom,
   ) : super.fromSTEB(
-          start.r,
-          top.r,
-          end.r,
-          bottom.r,
+          start.rr,
+          top.rr,
+          end.rr,
+          bottom.rr,
         );
 }
