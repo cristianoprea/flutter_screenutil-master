@@ -19,7 +19,7 @@ class RPadding extends SingleChildRenderObjectWidget {
   @override
   RenderPadding createRenderObject(BuildContext context) {
     return RenderPadding(
-      padding: padding is REdgeInsets ? padding : padding.rr,
+      padding: padding is REdgeInsets ? padding : padding.r,
       textDirection: Directionality.maybeOf(context),
     );
   }
