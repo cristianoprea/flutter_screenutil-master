@@ -57,41 +57,41 @@ extension SizeExtension on num {
 extension EdgeInsetsExtension on EdgeInsets {
   /// Creates adapt insets using r [SizeExtension].
   EdgeInsets get r => copyWith(
-        top: top.r,
-        bottom: bottom.r,
-        right: right.r,
-        left: left.r,
+        top: top.rr,
+        bottom: bottom.rr,
+        right: right.rr,
+        left: left.rr,
       );
 
   EdgeInsets get w => copyWith(
-        top: top.w,
-        bottom: bottom.w,
-        right: right.w,
-        left: left.w,
+        top: top.ww,
+        bottom: bottom.ww,
+        right: right.ww,
+        left: left.ww,
       );
 
   EdgeInsets get h => copyWith(
-        top: top.h,
-        bottom: bottom.h,
-        right: right.h,
-        left: left.h,
+        top: top.hh,
+        bottom: bottom.hh,
+        right: right.hh,
+        left: left.hh,
       );
 }
 
 extension BorderRaduisExtension on BorderRadius {
   /// Creates adapt BorderRadius using r [SizeExtension].
   BorderRadius get r => copyWith(
-        bottomLeft: bottomLeft.r,
-        bottomRight: bottomRight.r,
-        topLeft: topLeft.r,
-        topRight: topRight.r,
+        bottomLeft: bottomLeft.rr,
+        bottomRight: bottomRight.rr,
+        topLeft: topLeft.rr,
+        topRight: topRight.rr,
       );
 
   BorderRadius get w => copyWith(
-        bottomLeft: bottomLeft.w,
-        bottomRight: bottomRight.w,
-        topLeft: topLeft.w,
-        topRight: topRight.w,
+        bottomLeft: bottomLeft.ww,
+        bottomRight: bottomRight.ww,
+        topLeft: topLeft.ww,
+        topRight: topRight.ww,
       );
 
   BorderRadius get h => copyWith(
@@ -104,41 +104,41 @@ extension BorderRaduisExtension on BorderRadius {
 
 extension RaduisExtension on Radius {
   /// Creates adapt Radius using r [SizeExtension].
-  Radius get r => Radius.elliptical(x.r, y.r);
+  Radius get r => Radius.elliptical(x.rr, y.rr);
 
-  Radius get w => Radius.elliptical(x.w, y.w);
+  Radius get w => Radius.elliptical(x.ww, y.ww);
 
-  Radius get h => Radius.elliptical(x.h, y.h);
+  Radius get h => Radius.elliptical(x.ww, y.ww);
 }
 
 extension BoxConstraintsExtension on BoxConstraints {
   /// Creates adapt BoxConstraints using r [SizeExtension].
   BoxConstraints get r => this.copyWith(
-        maxHeight: maxHeight.r,
-        maxWidth: maxWidth.r,
-        minHeight: minHeight.r,
-        minWidth: minWidth.r,
+        maxHeight: maxHeight.rr,
+        maxWidth: maxWidth.rr,
+        minHeight: minHeight.rr,
+        minWidth: minWidth.rr,
       );
 
   /// Creates adapt BoxConstraints using h-w [SizeExtension].
   BoxConstraints get hw => this.copyWith(
-        maxHeight: maxHeight.h,
-        maxWidth: maxWidth.w,
-        minHeight: minHeight.h,
-        minWidth: minWidth.w,
+        maxHeight: maxHeight.ww,
+        maxWidth: maxWidth.ww,
+        minHeight: minHeight.ww,
+        minWidth: minWidth.ww,
       );
 
   BoxConstraints get w => this.copyWith(
-        maxHeight: maxHeight.w,
-        maxWidth: maxWidth.w,
-        minHeight: minHeight.w,
-        minWidth: minWidth.w,
+        maxHeight: maxHeight.ww,
+        maxWidth: maxWidth.ww,
+        minHeight: minHeight.ww,
+        minWidth: minWidth.ww,
       );
 
   BoxConstraints get h => this.copyWith(
-        maxHeight: maxHeight.h,
-        maxWidth: maxWidth.h,
-        minHeight: minHeight.h,
-        minWidth: minWidth.h,
+        maxHeight: maxHeight.ww,
+        maxWidth: maxWidth.ww,
+        minHeight: minHeight.ww,
+        minWidth: minWidth.ww,
       );
 }
